@@ -1,0 +1,117 @@
+:root {
+--brightorange: hsl(31, 77%, 52%);
+--darkcyan: hsl(184, 100%, 22%);
+--verydarkcyan: hsl(179, 100%, 13%);
+
+--transparentwhite /* (paragraphs) */: hsla(0, 0%, 100%, 0.75);
+--verylightgray /* (background, headings, buttons) */: hsl(0, 0%, 95%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: var(--transparentwhite);
+   
+}
+
+.attribution {
+margin-top: 50px;
+
+}
+.container {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 300px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 40px;
+    
+}
+.card > img {
+    width: 70px;
+    margin: 0px 0px;
+}
+
+.card > h2 {
+    font-family: 'Big Shoulders Display', cursive;
+    color: #ffff;
+    font-size: 35px;
+    margin-left: 0;
+}
+.card > p {
+    font-family: 'Lexend Deca', sans-serif;
+    color: var(--verylightgray);
+}
+.card:nth-of-type(1) {
+    background-color: var(--brightorange);
+    border-radius: 20px 0 0 20px;
+}
+.card:nth-of-type(2) {
+    background-color: var(--darkcyan);
+}
+.card:nth-of-type(3) {
+    background-color: var(--verydarkcyan);
+    border-radius: 0 20px 20px 0;
+}
+
+.btn {
+    width: 150px;
+    height: 50px;
+    padding: 8px 16px;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;  
+}
+.btn1 {
+    color: var(--brightorange);
+}
+.btn2 {
+    color: var(--darkcyan);
+}
+.btn3 {
+    color: var(--verydarkcyan);
+}
+
+@media (max-width: 650px) {
+    .container { 
+        flex-direction: column;
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+    .card:nth-of-type(1) {
+        border-radius: 20px 20px 0 0px;
+    }
+    .card:nth-of-type(3) {
+        border-radius: 0 0px 20px 20px;
+    }
+}
+@media (max-width: 375px){
+    .container {
+        height: 120vh;
+        margin-bottom: 50px;
+        margin-top: 50px;
+    }
+    .card > h2 {
+        margin-top: 10px;
+    }
+    .card > p {
+        margin-top: 12px;
+    }
+    .btn {
+       margin-top: 30px;
+    }
+
+}
+    
